@@ -57,7 +57,7 @@ app.use(cors({
 // ===================================
 // تحديد عدد الطلبات المسموح بها من نفس IP
 const limiter = rateLimit({
-  windowMs: parseInt(process.env.RATE_LIMIT_WINDOW_MS || 15) * 60 * 1000, // 15 دقيقة افتراضياً
+  windowMs: parseInt(process.env.RATE_LIMIT_WINDOW_MS || 900000), // 15 دقيقة افتراضياً (بالميلي ثانية)
   max: parseInt(process.env.RATE_LIMIT_MAX || 100), // 100 طلب افتراضياً
   message: 'لقد تجاوزت الحد المسموح من الطلبات. يرجى المحاولة لاحقاً.',
   standardHeaders: true,
