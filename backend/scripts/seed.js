@@ -18,15 +18,16 @@ async function seedDatabase() {
     await Doctor.deleteMany({});
     console.log('Cleared existing data');
 
-    // Hash password
-    const hashedPassword = await bcrypt.hash('admin123', 10);
+    // Hash passwords
+    const hashedPasswordChief = await bcrypt.hash('nj0000', 10);
+    const hashedPasswordAssistant = await bcrypt.hash('admin123', 10);
     console.log('Password hashed successfully');
 
     // Create admin users
     const users = await User.insertMany([
       {
-        username: 'admin',
-        password: hashedPassword,
+        username: 'najafd',
+        password: hashedPasswordChief,
         role: 'chief_of_doctors',
         fullName: 'رئيس الأطباء العموم',
         phone: '07700000000',
@@ -34,7 +35,7 @@ async function seedDatabase() {
       },
       {
         username: 'admina',
-        password: hashedPassword,
+        password: hashedPasswordAssistant,
         role: 'chief_of_doctors',
         fullName: 'رئيس الأطباء العموم المساعد',
         phone: '07700000001',
