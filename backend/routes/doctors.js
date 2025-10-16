@@ -70,7 +70,7 @@ router.post('/', auth, [
     }
     
     // If head_of_doctors, ensure they can only add to their hospital
-    if (req.user.role === 'head_of_doctors') {
+    if (req.user.role === 'head_of_doctors' && req.user.hospitalId) {
       if (req.body.currentHospital !== req.user.hospitalId.toString() && 
           req.body.originalHospital !== req.user.hospitalId.toString()) {
         return res.status(403).json({ message: 'يمكنك إضافة أطباء لمستشفاك فقط' });
@@ -118,7 +118,7 @@ router.put('/:id', auth, async (req, res) => {
     }
     
     // If head_of_doctors, ensure they can only edit doctors in their hospital
-    if (req.user.role === 'head_of_doctors') {
+    if (req.user.role === 'head_of_doctors' && req.user.hospitalId) {
       const doctor = await Doctor.findById(req.params.id);
       if (!doctor) {
         return res.status(404).json({ message: 'الطبيب غير موجود' });
