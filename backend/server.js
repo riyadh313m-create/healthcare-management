@@ -70,7 +70,7 @@ app.use(limiter);
 // rate limiting أكثر صرامة لمسارات المصادقة
 const authLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 دقيقة
-  max: 5, // 5 محاولات فقط
+  max: 20, // 20 محاولة (زيادة من 5 إلى 20)
   message: 'لقد تجاوزت عدد محاولات تسجيل الدخول. يرجى المحاولة بعد 15 دقيقة.',
   skipSuccessfulRequests: true,
 });
