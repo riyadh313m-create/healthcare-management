@@ -1,0 +1,58 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ===================================
+# ملفات الأمان والبيئة
+# ===================================
+# ملفات المتغيرات البيئية (تحتوي على معلومات حساسة)
+.env
+.env.local
+.env.production
+.env.*.local
+backend/.env
+backend/.env.local
+backend/.env.production
+
+# ملفات SSL/TLS (الشهادات والمفاتيح الخاصة)
+*.pem
+*.key
+*.cert
+*.crt
+ssl/
+
+# ملفات قاعدة البيانات المحلية
+*.sqlite
+*.sqlite3
+*.db
+data/
+
+# ملفات النسخ الاحتياطي
+*.backup
+*.bak
+backup/
+
+# ملفات التكوين السرية
+config/secrets.js
+config/secrets.json

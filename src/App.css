@@ -1,0 +1,74 @@
+/* إعادة تعيين الستايلات الأساسية */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* الخط الأساسي والاتجاه */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  direction: rtl;
+  text-align: right;
+  background-color: #f8f9fa;
+  line-height: 1.6;
+}
+
+/* تحسين عرض النصوص العربية */
+html {
+  direction: rtl;
+}
+
+/* إزالة التحديد الافتراضي للروابط */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* تحسين عرض الأزرار */
+button {
+  font-family: inherit;
+  direction: rtl;
+}
+
+/* تحسين عرض النماذج */
+input, select, textarea {
+  font-family: inherit;
+  direction: rtl;
+  text-align: right;
+}
+
+/* إخفاء الشريط التمرير في المتصفحات الحديثة */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+
+/* تحسين الأداء للخطوط */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* تحسين التحديد */
+::selection {
+  background-color: rgba(102, 126, 234, 0.2);
+}
+
+/* تحسين التركيز */
+*:focus {
+  outline: 2px solid rgba(102, 126, 234, 0.5);
+  outline-offset: 2px;
+}
