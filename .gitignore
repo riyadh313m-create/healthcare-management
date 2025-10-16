@@ -56,3 +56,6 @@ backup/
 # ملفات التكوين السرية
 config/secrets.js
 config/secrets.json
+
+# Local Netlify folder
+.netlify
